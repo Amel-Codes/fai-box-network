@@ -1,0 +1,5 @@
+zone "amel.com" {
+    type master;
+    file "/etc/bind/db.amel.com";
+    allow-transfer { 192.168.1.1; };  # Autoriser la box (esclave) à récupérer la zone
+};

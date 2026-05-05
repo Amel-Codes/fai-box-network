@@ -1,0 +1,34 @@
+# ── Credentials & sensitive files ─────────────────────────
+# Les fichiers sudoers.tmp contiennent des configs avec NOPASSWD:ALL
+# Ne JAMAIS committer ces fichiers sur un repo public
+sudoers.tmp
+*.tmp
+
+# SSH keys
+.ssh/
+id_rsa
+id_rsa.pub
+*.pem
+*.key
+
+# ── Base de données ────────────────────────────────────────
+*.sql
+*.db
+*.sqlite
+
+# ── Logs ──────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS & éditeurs ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
+
+# ── PHP/Web ───────────────────────────────────────────────
+# Fichier de config local avec credentials BDD si créé
+config.local.php
+.env

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Box - Accueil</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0078d7;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        /*titre et sous titre du header plus grands et sans marge vers le bas*/
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 1rem 0 0;
+            font-size: 1.2rem;
+        }
+        nav {
+            background-color: #0056a3;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            font-weight: bold;
+            margin: 0 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+           background-color: #003d7c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        .widget-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+        .widget {
+            background-color: #003d7c;
+            color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            width: 220px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /*déplace le widget vers le haut lorsqu'il est survolé.*/
+        .widget:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .widget-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+        .widget-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            text-decoration: none; 
+            color: inherit;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #f4f4f4;
+            color: #777;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenue sur l'Interface Box</h1>
+        <p>Gérez vos services simplement</p>
+    </header>
+
+    <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Support</a>
+        <a href="#">À propos</a>
+    </nav>
+
+    <div class="container">
+        <div class="widget-container">
+            <div class="widget">
+                <a href="connected_devices.php" class="widget-title">
+                    <img src="devices.png" alt="Appareils Connectés" class="widget-icon">
+                    <div class="widget-title">Les appareils connectés</div>
+                </a>
+            </div>
+            <div class="widget">
+                <a href="DEBITT.php" class="widget-title">
+                    <img src="vitesse.png" alt="Vérification Vitesse" class="widget-icon">
+                    <div class="widget-title">Vérification de la vitesse</div>
+                </a>
+            </div>
+
+            <div class="widget">
+                <a href="pageParamètres.php" class="widget-title">
+                    <img src="prmtrdmmis.png" alt="Paramètres Avancés" class="widget-icon">
+                    <div class="widget-title">Paramètres avancés</div>
+                </a>
+            </div>
+            <div class="widget">
+                <a href="modem_info.php" class="widget-title">
+                    <img src="modem.png" alt="Mon Modem" class="widget-icon">
+                    <div class="widget-title">Mon modem</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Interface Box. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
