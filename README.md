@@ -1,4 +1,4 @@
-# 📡 ISP Box Management Interface
+# ISP Box Management Interface
 
 > A web-based management interface for a simulated ISP (Internet Service Provider) network, built with 3 Linux VMs. Inspired by real ISP box dashboards, designed to be beginner-friendly while exposing real network services under the hood.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -42,19 +42,19 @@ All configurations are **persistent** (written to system files like `/etc/dhcp/d
 ┌─────────────────────────────────────────────────────────────────┐
 │                        NETWORK TOPOLOGY                         │
 │                                                                 │
-│   ┌──────────┐    192.168.1.0/24    ┌──────────────────────┐   │
-│   │  CLIENT  │◄──────────────────►  │        BOX           │   │
-│   │  VM      │     eth1 (static)    │  eth1: 192.168.1.1   │   │
-│   │192.168.1.4│                     │  eth2: 192.168.2.2   │   │
-│   └──────────┘                     │  eth0: NAT (Internet)│   │
-│                                    └──────────┬───────────┘   │
-│                                               │ 192.168.2.0/24 │
-│                                    ┌──────────▼───────────┐   │
-│                                    │         FAI           │   │
-│                                    │  eth1: 192.168.2.1   │   │
-│                                    │  eth0: NAT (Internet)│   │
-│                                    │  DNS master (bind9)  │   │
-│                                    └───────────────────────┘   │
+│   ┌──────────┐    192.168.1.0/24   ┌──────────────────────┐     │
+│   │  CLIENT  │◄──────────────────► │        BOX           │     │
+│   │  VM      │     eth1 (static)   │  eth1: 192.168.1.1   │     │
+│   │192.168.1.4│                    │  eth2: 192.168.2.2   │     │
+│   └──────────┘                     │  eth0: NAT (Internet)│     │
+│                                    └──────────┬───────────┘     │
+│                                               │ 192.168.2.0/24  │
+│                                    ┌──────────▼───────────┐     │
+│                                    │         FAI          │     │ 
+│                                    │  eth1: 192.168.2.1   │     │
+│                                    │  eth0: NAT (Internet)│     │
+│                                    │  DNS master (bind9)  │     │
+│                                    └──────────────────────┘     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
